@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+
+  
+
+</head>
+<body>
+   
+
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <div class="container-fluid p-2 text-center">
+                  <a class="navbar-brand" href="./index.html"><img src="./imagem/logopreto.png" alt="some text" width=90 height=100></a></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav bg-dark">
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="./index.html">home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="./fone.html">fone</a>
+                      </li>
+                      <li class="nav-item text-white">
+                        <a class="nav-link text-white" href="./mause.html">mause</a>
+                      </li>   
+                      <li class="nav-item text-white">
+                        <a class="nav-link text-white" href="./desktop.html">desktop</a>
+                      </li>   
+                      
+                      <li class="nav-item text-white">
+                        <a class="nav-link text-white" href="./teclado.html">teclado</a>
+                      </li>   
+                      
+                      <li class="nav-item text-white">
+                        <a class="nav-link text-white " href="./impressoara.html">impressora</a>
+                      </li>   
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card mt-5">
+                <div class="card-header">
+                    <h5 class="card-title text-center">Pagamento Pix</h5>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="valor" class="form-label">Valor</label>
+                            <input type="text" class="form-control" id="valor" placeholder="Digite o valor a ser pago" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="chave-pix" class="form-label">Chave Pix</label>
+                            <input type="text" class="form-control" id="chave-pix" placeholder="Digite a chave Pix do destinatário" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Pagar com Pix</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+   
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card mt-5">
+                <div class="card-header">
+                    <h5 class="card-title text-center">Gerador de Código QR</h5>
+                </div>
+                <div class="card-body">
+                    <div id="qrcode" class="text-center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
+<script>
+    // Função para gerar o código QR
+    function gerarQRCode() {
+        // Obtenha o valor para o código QR (por exemplo, um link)
+        var qrValue = "https://exemplo.com";
+
+        // Crie um novo objeto QRious
+        var qr = new QRious({
+            element: document.getElementById('qrcode'),
+            value: qrValue,
+            size: 200
+        });
+    }
+
+    // Chame a função para gerar o código QR quando a página for carregada
+    window.onload = function() {
+        gerarQRCode();
+    };
+</script> <!--qrious a biblioteca-->
+
+    
+</body>
+</html>
